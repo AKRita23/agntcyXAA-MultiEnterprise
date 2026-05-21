@@ -1,4 +1,13 @@
 # Cross Domain Multi-Agent Identity and Authorization 
+
+This POC specifies a cross-domain, multi-agent identity and authorization architecture for enterprise agentic AI workflows. The reference scenario is a vulnerability remediation pipeline that spans three enterprises (Dell, ServiceNow, GitHub), four agents (a Dell-side code scanner, ServiceNow's Now Assist remediation agent, a sub-agent for dependency resolution, and a GitHub PR creator), and three IdP boundaries — all coordinated through a unified trust architecture.
+
+The architecture composes four standards-grounded layers: 
+(1) AGNTCY-issued W3C Verifiable Credentials for portable capability attestation 
+(2) IETF Identity Assertion JWT Authorization Grant (ID-JAG, Okta XAA) for IdP-mediated cross-domain token exchange per RFC 8693 
+(3) [TBD] Cedar policy engine(policy evaluation and definition point) for fine-grained, declarative cross-boundary, task based agent authorization, with a credential minter to generate ephemeral creds for spawned OBO(on behalf of) agents. 
+(4) end-to-end subject propagation for cryptographically auditable delegation chains.
+
 ## Usecase : Multi Enterprise, Cross Domain, Agent driven Vulnerability Remediation workflow 
 
 ### High Level Business Workflow 
